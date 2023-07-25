@@ -1,6 +1,9 @@
 package page_object;
 
 import java.time.Duration;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -32,9 +35,6 @@ public class OrderPage {
   // Поле "Номер телефона"
   public static final By PHONE_NUMBER_INPUT = By.xpath(".//input[@placeholder='* Телефон: на него позвонит курьер']");
 
-  // Кнопка "Далее"
-  public static final By NEXT_BUTTON_BUTTON = By.xpath(".//button[text()='Далее']");
-
   // Поле "Когда привезти самокат"
   public static final By DELIVERY_DATE_INPUT = By.xpath(".//input[@placeholder='* Когда привезти самокат']");
 
@@ -45,6 +45,11 @@ public class OrderPage {
   public static final By COLOR_SCOOTER_IS_BLACK_INPUT = By.xpath(".//input[@id='black']");
   public static final By COLOR_SCOOTER_IS_GREY_INPUT = By.xpath(".//input[@id='grey']");
 
+  // Кнопка "Далее"
+  public static final By NEXT_BUTTON = By.xpath(".//button[text()='Далее']");
+
+  // Кнопка "Заказать"
+  public static final By ORDER_BUTTON = By.xpath(".//button[text()='Заказать']");
 
 
   private WebDriver driver;

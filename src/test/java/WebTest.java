@@ -28,6 +28,9 @@ public class WebTest {
   public static final Duration SHORT_WAIT = Duration.ofSeconds(3);
   private WebDriver driver;
 
+  MainPage mainPage = new MainPage(driver);
+  OrderPage orderPage = new OrderPage(driver);
+
   @Before
   public void before() {
     ChromeOptions chromeOptions = new ChromeOptions();
@@ -37,8 +40,6 @@ public class WebTest {
 
   @Test
   public void checkOrderButtonTop() {
-    MainPage mainPage = new MainPage(driver);
-    OrderPage orderPage = new OrderPage(driver);
     mainPage.open();
     mainPage.clickOrderStatusButtonTop();
     orderPage.isOrderDataHeaderVisible();
@@ -46,8 +47,6 @@ public class WebTest {
 
   @Test
   public void checkOrderButtonBottom() {
-    MainPage mainPage = new MainPage(driver);
-    OrderPage orderPage = new OrderPage(driver);
     mainPage.open();
     mainPage.clickOrderStatusButtonBottom();
     orderPage.isOrderDataHeaderVisible();
