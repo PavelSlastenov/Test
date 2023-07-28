@@ -1,14 +1,10 @@
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import page_object.MainPage;
 import page_object.OrderPage;
-
-import java.time.Duration;
 
 public class OrderButtonsTest {
 
@@ -16,9 +12,7 @@ public class OrderButtonsTest {
 
     @Before
     public void before() {
-        ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.addArguments("--remote-allow-origins=*");
-        driver = new ChromeDriver(chromeOptions);
+        driver = new FirefoxDriver();
     }
 
     @Test
