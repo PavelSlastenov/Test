@@ -39,7 +39,7 @@ public class OrderPageChromeTest {
   }
 
   @Parameterized.Parameters
-  public static Object[][] getSumData() {
+  public static Object[][] getOrderData() {
     return new Object[][] {
             {"Петя", "Смирнов", "Самара", "Черкизовская", "79653456789", "28.07.2923", "сутки", "black", "Спасибо"},
             {"Иван", "Иванов", "Коломна", "Партизанская", "89652345678", "29.07.2923", "двое суток", "grey", "Очень быстро"},
